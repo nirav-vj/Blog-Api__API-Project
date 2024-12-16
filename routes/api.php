@@ -23,7 +23,6 @@ Route::post('/admin/login',[UserController::class,'login']);
 
 Route::middleware('auth:api')->group(function(){ 
     
-     Route::group(['prefix' => 'admin'], function () {
 
         //home
         Route::group(['prefix' => 'home'], function () {
@@ -85,7 +84,6 @@ Route::middleware('auth:api')->group(function(){
 
         
         
-     });
 
 });
 
