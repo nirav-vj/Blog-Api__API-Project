@@ -60,7 +60,7 @@ class TagController extends Controller
         if($tag->update($input)){
                 return response()->json([
                 'message' => 'Your data is updated successfully',
-                'tag' => $tag
+                'tag' => new TagResources($tag)
             ]);
         }
     } 

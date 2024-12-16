@@ -87,7 +87,7 @@ class UserController extends Controller
             return 'user not found';
          }
 
-        return $input;
+        return new UserResources ($bloguser);
     }
 
 
@@ -98,7 +98,7 @@ class UserController extends Controller
 
         $bloguser = user::find($id);
         $input = $request->all();
-        $input['password'] = Hash::make($input['password']);
+        // $input['password'] = Hash::make($input['password']);
         
         if($bloguser->update($input)){
                 return new UserResources($bloguser);
