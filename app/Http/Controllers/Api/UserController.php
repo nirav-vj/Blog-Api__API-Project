@@ -33,7 +33,7 @@ class UserController extends Controller
                 new UserResources($user),
                 'token'  => $token,
                 'message'=> 'User login Successfully',
-                'status' => 1
+                'status' => 0
             ]);
             
         } else {
