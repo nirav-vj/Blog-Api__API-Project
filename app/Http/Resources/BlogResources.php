@@ -23,7 +23,7 @@ class BlogResources extends JsonResource
             'tag_name' => $this->tag->name,
             'categori_id'=>$this->categori_id,
             'categori_name'=>$this->categori->name,
-            'status'=>$this->status,
+            'status'=>$this->status == 1 ? 'publish' : ($this->status == 2 ? 'unpublish' : 'new user'),
             'date'=>$this->date,
         ];
     }
